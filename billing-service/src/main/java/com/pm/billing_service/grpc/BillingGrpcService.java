@@ -1,5 +1,6 @@
 package com.pm.billing_service.grpc;
 
+import billing.BillingResponse;
 import billing.BillingServiceGrpc.BillingServiceImplBase;
 import io.grpc.stub.StreamObserver;
 import net.devh.boot.grpc.server.service.GrpcService;
@@ -16,5 +17,13 @@ public class BillingGrpcService extends BillingServiceImplBase {
                                      StreamObserver<billing.BillingResponse> responseObserver) {
 
         log.info("createBillingAccount request received {}", billingRequest.toString());
+
+        BillingResponse billingResponse = BillingResponse.newBuilder()
+                .setAccountId("12345")
+                .setStatus("ACTIVE")
+                .build();
+
+        responseObserver.onNext(billingResponse);
+        responseObserver.onCompleted();
     }
 }
