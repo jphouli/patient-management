@@ -4,7 +4,7 @@ This repository contains a modular patient management system designed to practic
 
 ## Purpose
 
-The goal of this project is to provide a hands-on environment for developing and deploying microservices. It emphasizes service isolation, protocol diversity, and manual container orchestration to simulate real-world backend infrastructure.
+The goal of this project is to provide a hands-on environment for developing and deploying microservices. I moreso wanted to practice configuring and connecting microservices together over building the simple CRUD systems.
 
 ## Technologies
 
